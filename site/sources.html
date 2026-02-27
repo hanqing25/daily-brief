@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Daily Brief Sources</title>
+  <meta name="description" content="Daily brief archive and selected-source summaries" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a class="logo" href="index.html">Daily Brief Ledger</a>
+      <nav class="header-nav"><a class="nav-link " href="index.html">Latest</a><a class="nav-link " href="archive.html">Archive</a><a class="nav-link active" href="sources.html">Sources</a></nav>
+    </div>
+  </div>
+</header>
+
+<main class="container main-content">
+  <section class="hero-card">
+    <span class="eyebrow">Source Manager</span>
+    <div class="hero-head">
+      <div class="hero-copy">
+        <h1>Source Control</h1>
+        <p>This public page shows exactly what the brief watches. To add sources, edit the config files in the repo, rerun the pipeline, and push the updated static site.</p>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric-row"><span class="metric-label">Podcast Feeds</span><span class="metric-value">8</span></div>
+        <div class="metric-row"><span class="metric-label">X Accounts</span><span class="metric-value">10</span></div>
+        <div class="metric-row"><span class="metric-label">Edit Files</span><span class="metric-value">`config/sources.yaml` + `data/manual_sources.txt`</span></div>
+      </div>
+    </div>
+  </section>
+  <section class="two-col">
+    <div class="source-card">
+      <h3>Selected Podcasts</h3>
+      <ul class="source-list"><li>All-In with Chamath, Jason, Sacks &amp; Friedberg</li><li>Lex Fridman Podcast</li><li>Uncapped with Jack Altman</li><li>Crucible Moments (Sequoia)</li><li>Huberman Lab</li><li>Training Data</li><li>Acquired</li><li>Dwarkesh Podcast</li></ul>
+    </div>
+    <div class="source-card">
+      <h3>Selected X Accounts</h3>
+      <ul class="source-list"><li>Elon Musk (@elonmusk)</li><li>Sam Altman (@sama)</li><li>Dario Amodei (@darioamodei)</li><li>Demis Hassabis (@demishassabis)</li><li>Greg Brockman (@gdb)</li><li>Andrej Karpathy (@karpathy)</li><li>Satya Nadella (@satyanadella)</li><li>Nat Friedman (@natfriedman)</li><li>Bill Gurley (@bgurley)</li><li>Brad Gerstner (@altcap)</li></ul>
+    </div>
+    <div class="note-card">
+      <h3>How To Add A Podcast</h3>
+      <ol class="note-list">
+        <li>Find the official RSS feed.</li>
+        <li>Add a new item under `podcast_channels.selected_podcasts` in `config/sources.yaml`.</li>
+        <li>Run `./run_daily.sh`.</li>
+        <li>Push the updated repo so GitHub Pages republishes.</li>
+      </ol>
+    </div>
+    <div class="note-card">
+      <h3>How To Add An X Source</h3>
+      <ol class="note-list">
+        <li>Add the account under `selected_x_accounts` in `config/sources.yaml`.</li>
+        <li>Paste specific post URLs into `data/manual_sources.txt` until auto-ingestion is added.</li>
+        <li>Run `./run_daily.sh` and push again.</li>
+      </ol>
+    </div>
+  </section>
+  <section class="note-card" style="margin-top:14px;">
+    <h3>Current Config</h3>
+    <div class="pre-box"><pre>rss_sources: {}
+
+podcast_channels:
+  selected_podcasts:
+    - name: All-In with Chamath, Jason, Sacks &amp; Friedberg
+      rss_feed: https://rss.libsyn.com/shows/254861/destinations/1928300.xml
+    - name: Lex Fridman Podcast
+      rss_feed: https://lexfridman.com/feed/podcast/
+    - name: Uncapped with Jack Altman
+      rss_feed: https://feeds.megaphone.fm/PDP4191604852
+    - name: Crucible Moments (Sequoia)
+      rss_feed: https://feeds.megaphone.fm/VMP5587961509
+    - name: Huberman Lab
+      rss_feed: https://feeds.megaphone.fm/hubermanlab
+    - name: Training Data
+      rss_feed: https://feeds.megaphone.fm/trainingdata
+    - name: Acquired
+      rss_feed: https://feeds.transistor.fm/acquired
+    - name: Dwarkesh Podcast
+      rss_feed: https://apple.dwarkesh-podcast.workers.dev/feed.rss
+
+selected_x_accounts:
+  - name: Elon Musk
+    handle: elonmusk
+  - name: Sam Altman
+    handle: sama
+  - name: Dario Amodei
+    handle: darioamodei
+  - name: Demis Hassabis
+    handle: demishassabis
+  - name: Greg Brockman
+    handle: gdb
+  - name: Andrej Karpathy
+    handle: karpathy
+  - name: Satya Nadella
+    handle: satyanadella
+  - name: Nat Friedman
+    handle: natfriedman
+  - name: Bill Gurley
+    handle: bgurley
+  - name: Brad Gerstner
+    handle: altcap
+
+manual_sources_file: data/manual_sources.txt
+</pre></div>
+  </section>
+  <section class="note-card" style="margin-top:14px;">
+    <h3>Manual Links File</h3>
+    <div class="pre-box"><pre># Paste high-value links here each morning.
+# Format:
+# https://x.com/user/status/1234567890 | Why it matters
+# https://www.youtube.com/watch?v=VIDEO_ID | Important interview segment
+#
+# Selected X accounts (paste specific post URLs, not profile URLs):
+# - Elon Musk: https://x.com/elonmusk
+# - Sam Altman: https://x.com/sama
+# - Dario Amodei: https://x.com/darioamodei
+# - Demis Hassabis: https://x.com/demishassabis
+# - Greg Brockman: https://x.com/gdb
+# - Andrej Karpathy: https://x.com/karpathy
+# - Satya Nadella: https://x.com/satyanadella
+# - Nat Friedman: https://x.com/natfriedman
+# - Bill Gurley: https://x.com/bgurley
+# - Brad Gerstner: https://x.com/altcap
+</pre></div>
+  </section>
+</main>
+
+<footer class="container footer">Built as a public static site from your selected-source research workflow.</footer>
+
+</body>
+</html>

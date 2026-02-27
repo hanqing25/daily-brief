@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Daily Brief Archive</title>
   <meta name="description" content="Daily brief archive and selected-source summaries" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -12,22 +15,26 @@
 <header class="header">
   <div class="container">
     <div class="header-inner">
-      <a class="logo" href="index.html">Daily Brief</a>
-      <nav class="header-nav"><a href="archive.html">Archive</a></nav>
+      <a class="logo" href="index.html">Daily Brief Ledger</a>
+      <nav class="header-nav"><a class="nav-link " href="index.html">Latest</a><a class="nav-link active" href="archive.html">Archive</a><a class="nav-link " href="sources.html">Sources</a></nav>
     </div>
   </div>
 </header>
+
 <main class="container main-content">
-  <section class="hero">
-    <div class="panel hero-main">
-      <span class="eyebrow">Archive</span>
-      <h1>All Briefs</h1>
-      <p>Browse each day’s digest as a permanent static page. This is the page you can publish on GitHub Pages.</p>
+  <section class="hero-card">
+    <span class="eyebrow">Archive</span>
+    <div class="hero-head">
+      <div class="hero-copy">
+        <h1>All Briefs</h1>
+        <p>The same static, light editorial layout as the daily page, but organized as an archive. This keeps the public site simple and cheap to host.</p>
+      </div>
     </div>
   </section>
-  <section class="archive-grid"><a class='panel archive-card' href='2026-02-27.html'><h3>2026-02-27</h3><p>**Prince Andrew Arrested in UK**: Prince Andrew was arrested on charges related to mishandling trade secrets and forwarding non-public information to Jeffrey Epstein, with broader implications for elite accountability and global finance networks [2].</p></a></section>
+  <section class="archive-grid"><a class='archive-card' href='2026-02-27.html'><h3>2026-02-27</h3><p>**Prince Andrew Arrested in UK**: Arrest tied to mishandling trade secrets/public documents, with direct connections to Jeffrey Epstein’s global finance network and alleged sharing of non-public information [2].</p></a></section>
 </main>
-<footer class="container footer">Generated 2026-02-27 06:57 UTC</footer>
+
+<footer class="container footer">Built as a public static site from your selected-source research workflow.</footer>
 
 </body>
 </html>
