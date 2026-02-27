@@ -1,0 +1,44 @@
+rss_sources: {}
+
+podcast_channels:
+  selected_podcasts:
+    - name: All-In with Chamath, Jason, Sacks & Friedberg
+      rss_feed: https://rss.libsyn.com/shows/254861/destinations/1928300.xml
+    - name: Lex Fridman Podcast
+      rss_feed: https://lexfridman.com/feed/podcast/
+    - name: Uncapped with Jack Altman
+      rss_feed: https://feeds.megaphone.fm/PDP4191604852
+    - name: Crucible Moments (Sequoia)
+      rss_feed: https://feeds.megaphone.fm/VMP5587961509
+    - name: Huberman Lab
+      rss_feed: https://feeds.megaphone.fm/hubermanlab
+    - name: Training Data
+      rss_feed: https://feeds.megaphone.fm/trainingdata
+    - name: Acquired
+      rss_feed: https://feeds.transistor.fm/acquired
+    - name: Dwarkesh Podcast
+      rss_feed: https://apple.dwarkesh-podcast.workers.dev/feed.rss
+
+selected_x_accounts:
+  - name: Elon Musk
+    handle: elonmusk
+  - name: Sam Altman
+    handle: sama
+  - name: Dario Amodei
+    handle: darioamodei
+  - name: Demis Hassabis
+    handle: demishassabis
+  - name: Greg Brockman
+    handle: gdb
+  - name: Andrej Karpathy
+    handle: karpathy
+  - name: Satya Nadella
+    handle: satyanadella
+  - name: Nat Friedman
+    handle: natfriedman
+  - name: Bill Gurley
+    handle: bgurley
+  - name: Brad Gerstner
+    handle: altcap
+
+manual_sources_file: data/manual_sources.txt

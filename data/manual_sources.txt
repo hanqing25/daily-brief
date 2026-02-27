@@ -1,0 +1,16 @@
+# Paste high-value links here each morning.
+# Format:
+# https://x.com/user/status/1234567890 | Why it matters
+# https://www.youtube.com/watch?v=VIDEO_ID | Important interview segment
+#
+# Selected X accounts (paste specific post URLs, not profile URLs):
+# - Elon Musk: https://x.com/elonmusk
+# - Sam Altman: https://x.com/sama
+# - Dario Amodei: https://x.com/darioamodei
+# - Demis Hassabis: https://x.com/demishassabis
+# - Greg Brockman: https://x.com/gdb
+# - Andrej Karpathy: https://x.com/karpathy
+# - Satya Nadella: https://x.com/satyanadella
+# - Nat Friedman: https://x.com/natfriedman
+# - Bill Gurley: https://x.com/bgurley
+# - Brad Gerstner: https://x.com/altcap
